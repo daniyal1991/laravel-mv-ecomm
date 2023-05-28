@@ -21,7 +21,7 @@ class InsertAdminsData extends Seeder
                 'name'=>'Super Admin',
                 'type'=>'superadmin',
                 'vendor_id'=>0,
-                'mobile'=>'1234567890',
+                'phone'=>'1234567890',
                 'email'=>'superadmin@e.com',
                 'password'=>Hash::make('12345'),
                 'image'=>'',

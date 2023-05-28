@@ -21,7 +21,7 @@ class CreateVendorsTable extends Migration
             $table->string('state');
             $table->string('country');
             $table->string('zipcode');
-            $table->string('mobile');
+            $table->string('phone');
             $table->string('email')->unique();
             $table->tinyInteger('status');
             $table->timestamps();

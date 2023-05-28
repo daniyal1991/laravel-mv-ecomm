@@ -18,7 +18,7 @@ class CreateAdminsTable extends Migration
             $table->string('name');
             $table->string('type');
             $table->integer('vendor_id');
-            $table->string('mobile');
+            $table->string('phone');
             $table->string('email')->unique();
             $table->string('password');
             $table->string('image');
