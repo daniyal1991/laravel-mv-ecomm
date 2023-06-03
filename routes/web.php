@@ -32,12 +32,15 @@ Route::group([
     'prefix' => '/admin',
     'namespace' => 'App\Http\Controllers\Admin'
 ], function() {
-    Route::any('/login','AdminController@login');
+    Route::any('/login','AdminController@login')->name('admin_login');
 
     Route::group(['middleware' => 'admin'], function() {
         Route::get('/dashboard', 'AdminController@dashboard');
+        Route::any('/update_admin_password', 'AdminController@updateAdminPassword')->name('admin_update_admin_password');
+        Route::post('/check_admin_password', 'AdminController@checkAdminPassword')->name('admin_check_admin_password');;
+        Route::match(['get','post'],'/update_admin_details', 'AdminController@updateAdminDetails')->name('admin_update_admin_details');;
 
-        Route::get('/logout', 'AdminController@logout');
+        Route::get('/logout', 'AdminController@logout')->name('admin_logout');
     });
 
 });
